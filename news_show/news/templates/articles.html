@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{block.super}}
+
+<h1 class='text-center'>ARTICLES FROM VARIOUS NEWS SOURCES</h1>
+
+{%  for data in top_headlines %}
+
+        <p>AUTHOR: {{data.author}}</p>
+        <p>TITLE: {{data.title}}</p>
+            <p>DESCRIPTION: {{data.description}}</p>            
+            <a href="{{data.url}}">
+              Read More
+            </a>
+        <img src="{{data.urlToImage}}" alt="" style="width:40%;height: 30%">
+            <p>{{data.publishedAt}}</p>
+
+            <hr>
+
+{% endfor %}
+
+
+
+{% endblock %}
