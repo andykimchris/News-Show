@@ -18,9 +18,9 @@ from django.contrib import admin
 from django.contrib.auth import views
 
 urlpatterns = [
-    url('admin/', admin.site.urls),
-    url('news/', include('news.urls')),
+    url(r'^admin/', admin.site.urls),
+    url(r'^news/', include('news.urls')),
     url(r'^logout/$', views.logout, {"next_page": "news/sources"}),
-    url('accounts/', include('registration.backends.simple.urls')),
+    url(r'^accounts/', include('registration.backends.simple.urls')),
 
 ]
