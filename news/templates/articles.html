@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{block.super}}
+
+<h1 class='text-center'>NEWS ARTICLES</h1>
+
+<div class="row articles">
+
+{%  for data in top_headlines %}
+<div class="col-lg-6">
+
+        <h2>{{data.title}}</h2>
+        <p>AUTHOR: <strong> {{data.author}} </strong></p>
+        <img src="{{data.urlToImage}}" alt="" style="width:80%;height: 65%">
+        <p class="articles-description"><strong>DESCRIPTION: </strong>{{data.description}}</p>            
+
+        <div class="read-more-link text-center">
+                <a href="{{data.url}}">
+                        Read More
+                      </a>
+        </div>
+            </div>
+{% endfor %}
+</div>
+
+
+
+{% endblock %}
