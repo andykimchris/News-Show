@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{block.super}}
+
+
+<div class="row sources">
+
+{%  for data in sources_articles %}
+
+<div class="col-lg-6">
+
+<h1 class="text-center"> {{data.name}}</h1>
+        <h3 class="text-center">Story from:  <strong>{{data.country}}</strong></h3>
+
+            <p><strong>DESCRIPTION:</strong>{{data.description}}</p>    
+            <div class="read-more-link text-center">
+                    <a href="{{data.url}}">
+                            Actual Site
+                          </a>
+            </div>
+            </div>
+
+              {% endfor %}
+
+</div>
+
+{% endblock %}
