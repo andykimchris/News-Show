@@ -1,0 +1,36 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="{% url 'sources' %}" class="navbar-brand">News Show</a>
+    </div>
+
+    {% if user.is_authenticated%}
+    <div class="links">
+    <ul>
+        <li>
+            <a href="{% url 'articles' %}">Articles</a>
+          </li>
+      <li>
+        <a href="/logout">Logout</a>
+      </li>
+    </ul>
+    </div>
+      {% else %}
+      <div class="links">
+      <ul>
+      <li>
+        <a href="/accounts/login">Login</a>
+      </li>
+      <li>
+        <a href="/accounts/register">Sign Up</a>
+      </li>
+    </ul>
+    </div>
+      {%endif%}
+     
+    </div>
+
+
+
+
+</nav>
