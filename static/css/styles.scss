@@ -17,6 +17,7 @@ body  {
         text-transform: uppercase;
         color: $primary-color;
         font-size: 1.5em;
+        font-weight: 600;
     }
 }
 
@@ -78,7 +79,13 @@ body  {
     }
 }
 
-
+.panel-heading {
+    h2 {
+        font-weight: 600;
+        color: $primary-color;
+        text-align: center;
+    }
+}
 
 .panel-body {
 
@@ -137,3 +144,13 @@ body  {
           margin-bottom: 1em;
           cursor: pointer;
 }
+
+
+@media(max-width: 400px) {
+    .navbar-header {
+        display: flex;
+        a {
+            text-align: center;
+        }
+    }
+} 

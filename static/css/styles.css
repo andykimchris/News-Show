@@ -11,7 +11,8 @@ body {
 .navbar-header a {
   text-transform: uppercase;
   color: #00afe4;
-  font-size: 1.5em; }
+  font-size: 1.5em;
+  font-weight: 600; }
 
 .sources .col-lg-6 {
   margin-bottom: 1.5em; }
@@ -52,6 +53,11 @@ body {
     .links ul li:nth-child(2) a {
       text-decoration: none;
       color: #fff; }
+
+.panel-heading h2 {
+  font-weight: 600;
+  color: #00afe4;
+  text-align: center; }
 
 .panel-body label {
   color: #fff; }
@@ -96,5 +102,11 @@ body {
   font-weight: 700;
   margin-bottom: 1em;
   cursor: pointer; }
+
+@media (max-width: 400px) {
+  .navbar-header {
+    display: flex; }
+    .navbar-header a {
+      text-align: center; } }
 
 /*# sourceMappingURL=styles.css.map */
