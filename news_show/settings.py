@@ -27,7 +27,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEBUG = False
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-SECRET_KEY = os.environ.get('SECRET_KEY_NEWS')
+# SECRET_KEY = os.environ.get('SECRET_KEY_NEWS')
+SECRET_KEY = config('SECRET_KEY_NEWS')
 
 ALLOWED_HOSTS = ['*']
 
