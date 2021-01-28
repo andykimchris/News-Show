@@ -1,0 +1,112 @@
+h1 {
+  color: #00afe4; }
+
+body {
+  overflow-x: hidden;
+  font-family: 'Raleway', sans-serif; }
+
+* {
+  font-family: 'Raleway', sans-serif; }
+
+.navbar-header a {
+  text-transform: uppercase;
+  color: #00afe4;
+  font-size: 1.5em;
+  font-weight: 600; }
+
+.sources .col-lg-6 {
+  margin-bottom: 1.5em; }
+  .sources .col-lg-6 h3 {
+    font-weight: 100; }
+  .sources .col-lg-6 .read-more-link {
+    font-size: 1.3em;
+    color: #00afe4; }
+    .sources .col-lg-6 .read-more-link a {
+      color: #00afe4;
+      text-decoration: none; }
+
+.articles .col-lg-6 {
+  margin-bottom: 3em; }
+  .articles .col-lg-6 .read-more-link {
+    font-size: 1.3em;
+    color: #00afe4; }
+    .articles .col-lg-6 .read-more-link a {
+      color: #00afe4;
+      text-decoration: underline; }
+
+.links ul {
+  display: flex;
+  margin-top: 0.7em; }
+  .links ul li {
+    list-style: none;
+    font-size: 1.2em;
+    flex-direction: row;
+    display: inline-block;
+    margin-right: 0.5em;
+    padding: 0.9em 1em; }
+    .links ul li a {
+      text-decoration: none;
+      color: #00afe4; }
+  .links ul li:nth-child(2) {
+    background-color: #00afe4;
+    padding: 0.9em 1em; }
+    .links ul li:nth-child(2) a {
+      text-decoration: none;
+      color: #fff; }
+
+.panel-heading h2 {
+  font-weight: 600;
+  color: #00afe4;
+  text-align: center; }
+
+.panel-body label {
+  color: #fff; }
+.panel-body .signupform .form-control {
+  border: none;
+  border-bottom: 1px solid #00afe4;
+  width: 80%;
+  margin-bottom: 2.5rem;
+  outline: none;
+  color: #00afe4;
+  border-radius: 0.01em; }
+  .panel-body .signupform .form-control:focus {
+    border-color: #000;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    width: 50%;
+    transition: width 0.7s ease-out; }
+.panel-body .signupform button {
+  color: #fff;
+  background-color: #00afe4;
+  border-radius: none;
+  padding: 1.1em 0.9em;
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-bottom: 1em; }
+  .panel-body .signupform button:hover {
+    color: #00afe4;
+    background: #fff;
+    border: 1px solid #00afe4;
+    transition: all 0.1s ease-in; }
+.panel-body ::placeholder {
+  color: #00afe4 !important; }
+
+.registration-button {
+  color: #ffa;
+  background-color: #00afe4;
+  border-radius: none;
+  padding: 0.8em 0.7em;
+  outline: none;
+  border: none;
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-bottom: 1em;
+  cursor: pointer; }
+
+@media (max-width: 400px) {
+  .navbar-header {
+    display: flex; }
+    .navbar-header a {
+      text-align: center; } }
+
+/*# sourceMappingURL=styles.css.map */

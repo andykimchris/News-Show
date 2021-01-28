@@ -1,5 +1,6 @@
 .vscode
-/virtual
+/env
 *.pyc
 /_pycache_
 .env
+.gitignore

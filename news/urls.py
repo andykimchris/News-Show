@@ -1,8 +1,9 @@
-from django.conf.urls import url
+from django.urls import path
+
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.sources, name="sources"),
-    url(r'^news/articles/$', views.articles, name="articles"),
+    path('', views.sources, name="sources"),
+    path('news/articles/$', views.articles, name="articles"),
 
 ]
