@@ -11,7 +11,7 @@ django-registration==3.2
 gunicorn==20.1.0
 idna==2.5
 newsapi-python==0.2.6
-Pillow==8.3.2
+Pillow==9.0.0
 pkg_resources==0.0.0
 psycopg2==2.8.6
 python-decouple==3.4
