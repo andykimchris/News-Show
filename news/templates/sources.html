@@ -6,7 +6,7 @@
 
     <div class="col-lg-6">
       <h1 class="text-center">
-        <a href="{{ source.url }}"> {{source.name}} </a>
+        <a href="{{ source.url }}" target="_blank" style="color: #00afe4"> {{source.name}} </a>
         </h1>
       <h4 class="text-center">
         Story from: <strong>{{source.country|upper}}</strong>
@@ -28,7 +28,7 @@
       </p>
 
       <div class="read-more-link text-center">
-        <a href="{{ headline.url }}"> Read More </a>
+        <a href="{{ headline.url }}" target="_blank"> Read More </a>
       </div>
 
       {% endif %} {% endfor %}
