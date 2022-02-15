@@ -1,29 +1,41 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block content %} {{block.super}}
 
-{% block content %}
-{{block.super}}
+<div class="">
+  <div class="row sources">
+    {% for source in sources_articles %}
 
-<div class="container">
-<div class="row sources">
+    <div class="col-lg-6">
+      <h1 class="text-center">
+        <a href="{{ source.url }}"> {{source.name}} </a>
+        </h1>
+      <h4 class="text-center">
+        Story from: <strong>{{source.country|upper}}</strong>
+      </h4>
 
-{%  for data in sources_articles %}
+      <h5 class="text-center">Biggest Headlines</h5>
 
-<div class="col-lg-6">
+      {% for headline in top_headlines %} 
+      {%if headline.source.id == source.id %}
+        {% if headline.author %}
+                <p class="text-center">AUTHOR: <strong> {{ headline.author }} </strong></p>
+                {% else %}
+                <p class="text-center">AUTHOR: <strong> {{ headline.source.name }} </strong></p>
+      {% endif %}
 
-<h1 class="text-center"> {{data.name}}</h1>
-        <h3 class="text-center">Story from:  <strong>{{data.country}}</strong></h3>
+      <p class="text-center"><strong>Title:</strong> {{headline.title}}</p>
+      <p class="articles-description text-center">
+        <strong>Description: </strong>{{headline.description}}
+      </p>
 
-            <p><strong>DESCRIPTION:</strong>{{data.description}}</p>    
-            <div class="read-more-link text-center">
-                    <a href="{{data.url}}">
-                            Actual Site
-                          </a>
-            </div>
-            </div>
+      <div class="read-more-link text-center">
+        <a href="{{ headline.url }}"> Read More </a>
+      </div>
 
-              {% endfor %}
+      {% endif %} {% endfor %}
+    </div>
 
-</div>
+    {% endfor %}
+  </div>
 </div>
 
 {% endblock %}
