@@ -30,7 +30,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 # SECRET_KEY = os.environ.get('SECRET_KEY_NEWS')
 SECRET_KEY = config('SECRET_KEY_NEWS')
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://news-show-kim.herokuapp.com/', '127.0.0.1']
 
 # Application definition
 
