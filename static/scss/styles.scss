@@ -30,6 +30,7 @@ body  {
        .read-more-link {
            font-size: 1.3em;
            color: $primary-color;
+           margin-bottom: 1rem;
            a {
             color: $primary-color;
             text-decoration: none;
@@ -145,12 +146,16 @@ body  {
           cursor: pointer;
 }
 
-
-@media(max-width: 400px) {
-    .navbar-header {
-        display: flex;
-        a {
-            text-align: center;
+@media(max-width: 425px) {
+    .container-fluid {
+        .links {
+            position: relative;
+            left: 25%;
         }
+    }
+    .col-lg-6 {
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-bottom: 1.5em;
     }
 } 

@@ -24,8 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = config('DEBUG', default=True, cast=bool)
 
 # SECRET_KEY = os.environ.get('SECRET_KEY_NEWS')
 SECRET_KEY = config('SECRET_KEY_NEWS')
@@ -44,7 +43,7 @@ INSTALLED_APPS = [
     'news',
     'bootstrap4',
     'django_registration',
-    'sass_processor'
+    'django_sass'
 ]
 
 MIDDLEWARE = [
@@ -142,14 +141,6 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"), ]
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-STATICFILES_FINDERS = [
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'sass_processor.finders.CssFinder',
-]
-
-# Django Sass
-SASS_PROCESSOR_ROOT = os.path.join(BASE_DIR,'static')
 
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
